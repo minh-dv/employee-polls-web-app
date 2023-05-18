@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* Not Found Page */
+.not-found {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.not-found h2 {
+  font-size: 100px;
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.not-found p {
+  margin: 10px 0;
+  font-size: 60px;
+}
+
+.not-found a {
+  text-decoration: none;
+  cursor: pointer;
+}
