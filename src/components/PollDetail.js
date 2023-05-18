@@ -71,7 +71,6 @@ export const PollDetail = () => {
 
   const percentOne = calcPercentage(OPTION_ONE, question);
   const percentTwo = calcPercentage(OPTION_TWO, question);
-  console.log({ question, percentOne, percentTwo });
   return (
     <div className="flex flex-col items-center justify-center">
       <h4 className="text-lg font-semibold mb-2">Poll By {authenedUserId}</h4>

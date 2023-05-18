@@ -9,21 +9,17 @@ import { useEffect } from "react";
 import { _getUsers, _getQuestions } from "./util/_DATA";
 import { getUsers } from "./reducers/userSlice";
 import { getQuestions } from "./reducers/questionSlice";
+
 import PrivateRoute from "./components/PrivateRoute";
 import { NotFound } from "./components/NotFound";
 import { PollDetail } from "./components/PollDetail";
+import { fetchData } from "./util/fetchData";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const users = await _getUsers();
-      const questions = await _getQuestions();
-      dispatch(getUsers(users));
-      dispatch(getQuestions(questions));
-    }
-    fetchData();
+    dispatch(fetchData());
   }, []);
   return (
     <div className="container mx-auto py-4">

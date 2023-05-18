@@ -24,7 +24,6 @@ export const NewPoll = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const question = await saveQuestion(firstOption, secondOption, author);
-    console.log(question);
     if (question) {
       const questionId = question.id;
       dispatch(addQuestion({ questionId, question }));
