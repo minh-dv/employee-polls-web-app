@@ -51,6 +51,7 @@ export const NewPoll = () => {
           <div className="mb-4">
             <label
               htmlFor="option1"
+              data-testid="firstOptionLabel"
               className="block font-medium text-gray-700 mb-2"
             >
               First Option
@@ -58,6 +59,7 @@ export const NewPoll = () => {
             <input
               type="text"
               id="option1"
+              data-testid="firstOption"
               name="option1"
               className="w-full border border-gray-300 rounded-lg py-2 px-4"
               placeholder="Option One"
@@ -69,6 +71,7 @@ export const NewPoll = () => {
           <div className="mb-4">
             <label
               htmlFor="option2"
+              data-testid="secondOptionLabel"
               className="block font-medium text-gray-700 mb-2"
             >
               Second Option
@@ -76,6 +79,7 @@ export const NewPoll = () => {
             <input
               type="text"
               id="option2"
+              data-testid="secondOption"
               name="option2"
               className="w-full border border-gray-300 rounded-lg py-2 px-4"
               placeholder="Option Two"
@@ -87,6 +91,7 @@ export const NewPoll = () => {
           <div className="flex justify-center">
             <button
               type="submit"
+              data-testid="submit-form"
               className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600 mx-auto w-1/4"
             >
               Create Poll

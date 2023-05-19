@@ -38,10 +38,7 @@ export const NavBar = () => {
         </Link>
       </div>
       <div className="mr-5 flex gap-5">
-        <span
-          className="font-medium px-3 py-2 text-slate-700"
-          data-testid="user-information"
-        >
+        <span className="font-medium px-3 py-2 text-slate-700">
           <UserInfo user={loggedInUser} />
         </span>
         <button

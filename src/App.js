@@ -6,9 +6,6 @@ import { NewPoll } from "./components/NewPoll";
 import { LeaderBoard } from "./components/LeaderBoard";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { _getUsers, _getQuestions } from "./util/_DATA";
-import { getUsers } from "./reducers/userSlice";
-import { getQuestions } from "./reducers/questionSlice";
 
 import PrivateRoute from "./components/PrivateRoute";
 import { NotFound } from "./components/NotFound";
@@ -20,7 +17,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="container mx-auto py-4">
       <Routes>

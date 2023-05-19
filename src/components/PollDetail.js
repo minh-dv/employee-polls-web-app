@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addAnswerUser } from "../reducers/userSlice";
 import { addAnswerQuestion } from "../reducers/questionSlice";
+import { NotFound } from "./NotFound";
 
 export const OPTION_ONE = "optionOne";
 export const OPTION_TWO = "optionTwo";
@@ -17,7 +18,9 @@ export const PollDetail = () => {
   const question = Object.values(questions).find(
     (question) => question.id === questionId
   );
-
+  if (!question) {
+    return <NotFound />;
+  }
   const hasVotedForOptionOne =
     question?.optionOne.votes.includes(authenedUserId);
   const hasVotedForOptionTwo =

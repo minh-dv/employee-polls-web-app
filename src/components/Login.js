@@ -23,6 +23,7 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await getUser(username, password);
+    console.log(user);
     if (user) {
       dispatch(login({ username, password }));
       setUsername("");

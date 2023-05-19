@@ -11,8 +11,15 @@ export const UserInfo = ({ user }) => {
         />
       </div>
       <div className="ml-4">
-        <div className="text-lg font-medium text-gray-900">{user.name}</div>
-        <div className="text-gray-600">ID: {user.id}</div>
+        <div
+          className="text-lg font-medium text-gray-900"
+          data-testid="user-name"
+        >
+          {user.name}
+        </div>
+        <div className="text-gray-600" data-testid="user-id">
+          ID: {user.id}
+        </div>
       </div>
     </div>
   );
