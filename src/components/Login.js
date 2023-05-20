@@ -23,13 +23,17 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await getUser(username, password);
-    console.log(user);
     if (user) {
       dispatch(login({ username, password }));
       setUsername("");
       setPassword("");
       localStorage.setItem("loggedInUser", JSON.stringify(user));
-      navigate("/");
+      // Retrieve the stored redirect path from localStorage
+      const redirectPath = localStorage.getItem("redirectPath");
+      localStorage.removeItem("redirectPath");
+
+      // Navigate the user back to the previous path or the home page if no redirect path is stored
+      navigate(redirectPath || "/");
     } else {
       setError("Invalid username or password. Please try again.");
     }
